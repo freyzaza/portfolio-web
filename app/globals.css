@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+/* === ACCENT ANIMATIONS (RED THEME) === */
+
+@keyframes heroGlow {
+  0%, 100% {
+    opacity: 0.6;
+    text-shadow:
+      0 0 4px rgba(255, 45, 85, 0.45),
+      0 0 12px rgba(255, 45, 85, 0.25);
+  }
+
+  50% {
+    opacity: 1;
+    text-shadow:
+      0 0 8px rgba(255, 94, 122, 0.95),
+      0 0 22px rgba(255, 94, 122, 0.75);
+  }
+}
+
+@keyframes navGlow {
+  0%, 100% {
+    opacity: 0.5;
+    text-shadow:
+      0 0 2px rgba(255, 45, 85, 0.5),
+      0 0 4px rgba(255, 45, 85, 0.3);
+  }
+  50% {
+    opacity: 1;
+    text-shadow:
+      0 0 6px rgba(255, 94, 122, 0.95),
+      0 0 14px rgba(255, 94, 122, 0.7);
+  }
+}
+
+/* Glow berdenyut untuk card / border merah */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(255, 45, 85, 0);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(255, 45, 85, 0.9);
+  }
+}
+
+/* Glitch text merah + sedikit biru biar cyberpunk */
+@keyframes textGlitch {
+  0% {
+    text-shadow: none;
+    transform: translate(0, 0);
+  }
+  15% {
+    text-shadow:
+      2px 0 rgba(255, 45, 85, 0.8),
+      -2px 0 rgba(71, 175, 255, 0.55);
+    transform: translate(-1px, 0);
+  }
+  30% {
+    text-shadow:
+      -2px 0 rgba(255, 45, 85, 0.8),
+      2px 0 rgba(71, 175, 255, 0.55);
+    transform: translate(1px, 0);
+  }
+  50% {
+    text-shadow:
+      3px 0 rgba(255, 45, 85, 0.9),
+      -3px 0 rgba(71, 175, 255, 0.6);
+    transform: translate(-1px, 1px);
+  }
+  75% {
+    text-shadow:
+      1px 0 rgba(255, 45, 85, 0.7),
+      -1px 0 rgba(71, 175, 255, 0.45);
+    transform: translate(0, 0);
+  }
+  100% {
+    text-shadow: none;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes boxGlow {
+  0%, 100% {
+    box-shadow:
+      0 0 10px rgba(255,45,85,0.35),
+      0 0 20px rgba(255,45,85,0.2);
+    border-color: rgba(255,255,255,0.25);
+  }
+  50% {
+    box-shadow:
+      0 0 22px rgba(255,45,85,0.9),
+      0 0 40px rgba(255,45,85,0.5);
+    border-color: rgba(255,45,85,0.9);
+  }
+}
+
+
+
+/* === GLOBAL STYLE === */
+
+body {
+  /* Hitam sebagai base, teks putih keabu-abuan */
+  @apply bg-black text-slate-50 font-sans;
+}
+
+/* Biar scroll halus ke section saat pakai scrollIntoView */
+html {
+  scroll-behavior: smooth;
+}
