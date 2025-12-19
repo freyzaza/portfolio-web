@@ -224,7 +224,7 @@ export default function Home() {
             </p>
 
             <a
-              href="/CV - Nicholas Ang.pdf"
+              href="/CV - Nicholas Wira Angkasa.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="
